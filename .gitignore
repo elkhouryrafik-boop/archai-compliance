@@ -1,0 +1,21 @@
+out/
+.venv/
+__pycache__/
+*.pyc
+*.sqlite3
+*.sqlite
+*.db
+chroma*/
+.env
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+*.log
+# plugin build output (PATH_A)
+plugin/bin/
+plugin/obj/
+*.rhp
+*.dll
+*.pdb

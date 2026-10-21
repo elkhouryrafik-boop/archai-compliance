@@ -1,0 +1,28 @@
+{
+  "model": "ARCHAI synthetic sample",
+  "units": "m",
+  "site": {
+    "zone": "R2",
+    "plot_area_m2": 9600.0
+  },
+  "buildings": [
+    {
+      "id": "BLDG_A",
+      "footprint_area_m2": 1800.0,
+      "floors": 7,
+      "height_m": 24.5,
+      "gross_floor_area_m2": 12600.0,
+      "far": 1.312,
+      "site_coverage_pct": 18.75
+    },
+    {
+      "id": "BLDG_B",
+      "footprint_area_m2": 1200.0,
+      "floors": 4,
+      "height_m": 14.0,
+      "gross_floor_area_m2": 4800.0,
+      "far": 0.5,
+      "site_coverage_pct": 12.5
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>ARCHAI compliance report</title>
+<style>
+body{font-family:Segoe UI,Arial,sans-serif;margin:2rem auto;max-width:1100px;color:#222}
+.banner{background:#fff3cd;border:1px solid #e0c36a;padding:.6rem 1rem;border-radius:6px}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #ddd;padding:.4rem .6rem;text-align:left;vertical-align:top;font-size:.9rem}
+th{background:#f4f4f4}
+.PASS{background:#d8f3dc}.FAIL{background:#f8d7da}
+.MISSING_METRIC{background:#fff3cd}.CANNOT_CHECK{background:#e2e3e5}
+.q{color:#555;font-style:italic}
+.chips span{display:inline-block;margin-right:.6rem;padding:.2rem .6rem;border-radius:4px}
+</style></head><body>
+<h1>ARCHAI compliance report</h1>
+<p class="banner">Synthetic sample - DreamTown is fictional. No real regulation, site or client data.</p>
+<p>Regulation: <strong>DreamTown Urban Regulation (fictional)</strong>
+ (source: regulation.md) &middot; Model: ARCHAI synthetic sample</p>
+<p class="chips"><span class="PASS">PASS: 8</span><span class="FAIL">FAIL: 2</span><span class="MISSING_METRIC">MISSING_METRIC: 8</span><span class="CANNOT_CHECK">CANNOT_CHECK: 2</span>
+<span>Total checks: 20</span></p>
+
+<h2>BLDG_A</h2>
+<table><thead><tr><th>Article</th><th>Quoted text</th><th>Metric</th><th>Measured</th>
+<th>Required</th><th>Status</th></tr></thead><tbody>
+<tr class="FAIL">
+<td>Article C2, clause 2.1<br>Building height</td>
+<td class="q">&ldquo;In zone R2, building height shall not exceed 21 m.&rdquo;</td>
+<td>height_m</td>
+<td>24.5 m</td>
+<td>&lt;= 21</td>
+<td><strong>FAIL</strong><br>Does not comply</td></tr>
+<tr class="FAIL">
+<td>Article C2, clause 2.2<br>Building height</td>
+<td class="q">&ldquo;In zone R2, the number of floors shall not exceed 6 floors.&rdquo;</td>
+<td>floors</td>
+<td>7 floors</td>
+<td>&lt;= 6</td>
+<td><strong>FAIL</strong><br>Does not comply</td></tr>
+<tr class="PASS">
+<td>Article C3, clause 3.1<br>Density and coverage</td>
+<td class="q">&ldquo;The floor area ratio shall not exceed 2.0.&rdquo;</td>
+<td>far</td>
+<td>1.312 </td>
+<td>&lt;= 2</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="PASS">
+<td>Article C3, clause 3.2<br>Density and coverage</td>
+<td class="q">&ldquo;Site coverage shall not exceed 45 % of the plot area.&rdquo;</td>
+<td>site_coverage_pct</td>
+<td>18.75 %</td>
+<td>&lt;= 45</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C4, clause 4.1<br>Setbacks</td>
+<td class="q">&ldquo;The front setback shall be at least 5 m from the plot boundary.&rdquo;</td>
+<td>front_setback_m</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;front_setback_m&#39; not available</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C4, clause 4.2<br>Setbacks</td>
+<td class="q">&ldquo;The side setback shall be at least 3 m from the plot boundary.&rdquo;</td>
+<td>side_setback_m</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;side_setback_m&#39; not available</td></tr>
+<tr class="PASS">
+<td>Article C5, clause 5.1<br>Minimum plot size</td>
+<td class="q">&ldquo;The plot area shall be at least 600 m2 for any new building.&rdquo;</td>
+<td>plot_area_m2</td>
+<td>9600.0 m2</td>
+<td>&gt;= 600</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C6, clause 6.1<br>Parking</td>
+<td class="q">&ldquo;Parking shall be provided at a rate of at least 1 space per 100 m2 of gross floor area.&rdquo;</td>
+<td>parking_spaces_per_100m2_gfa</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;parking_spaces_per_100m2_gfa&#39; not available</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C7, clause 7.1<br>Active frontage</td>
+<td class="q">&ldquo;On primary streets, ground-floor active frontage shall be at least 40 % of the building frontage length.&rdquo;</td>
+<td>active_frontage_pct</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;active_frontage_pct&#39; not available</td></tr>
+<tr class="CANNOT_CHECK">
+<td>Article C8, clause 8.1<br>Design quality</td>
+<td class="q">&ldquo;Buildings shall respect the character of the surrounding neighbourhood.&rdquo;</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>CANNOT_CHECK</strong><br>Rule has no machine-checkable metric/operator</td></tr>
+</tbody></table>
+
+<h2>BLDG_B</h2>
+<table><thead><tr><th>Article</th><th>Quoted text</th><th>Metric</th><th>Measured</th>
+<th>Required</th><th>Status</th></tr></thead><tbody>
+<tr class="PASS">
+<td>Article C2, clause 2.1<br>Building height</td>
+<td class="q">&ldquo;In zone R2, building height shall not exceed 21 m.&rdquo;</td>
+<td>height_m</td>
+<td>14.0 m</td>
+<td>&lt;= 21</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="PASS">
+<td>Article C2, clause 2.2<br>Building height</td>
+<td class="q">&ldquo;In zone R2, the number of floors shall not exceed 6 floors.&rdquo;</td>
+<td>floors</td>
+<td>4 floors</td>
+<td>&lt;= 6</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="PASS">
+<td>Article C3, clause 3.1<br>Density and coverage</td>
+<td class="q">&ldquo;The floor area ratio shall not exceed 2.0.&rdquo;</td>
+<td>far</td>
+<td>0.5 </td>
+<td>&lt;= 2</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="PASS">
+<td>Article C3, clause 3.2<br>Density and coverage</td>
+<td class="q">&ldquo;Site coverage shall not exceed 45 % of the plot area.&rdquo;</td>
+<td>site_coverage_pct</td>
+<td>12.5 %</td>
+<td>&lt;= 45</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C4, clause 4.1<br>Setbacks</td>
+<td class="q">&ldquo;The front setback shall be at least 5 m from the plot boundary.&rdquo;</td>
+<td>front_setback_m</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;front_setback_m&#39; not available</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C4, clause 4.2<br>Setbacks</td>
+<td class="q">&ldquo;The side setback shall be at least 3 m from the plot boundary.&rdquo;</td>
+<td>side_setback_m</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;side_setback_m&#39; not available</td></tr>
+<tr class="PASS">
+<td>Article C5, clause 5.1<br>Minimum plot size</td>
+<td class="q">&ldquo;The plot area shall be at least 600 m2 for any new building.&rdquo;</td>
+<td>plot_area_m2</td>
+<td>9600.0 m2</td>
+<td>&gt;= 600</td>
+<td><strong>PASS</strong><br>Complies</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C6, clause 6.1<br>Parking</td>
+<td class="q">&ldquo;Parking shall be provided at a rate of at least 1 space per 100 m2 of gross floor area.&rdquo;</td>
+<td>parking_spaces_per_100m2_gfa</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;parking_spaces_per_100m2_gfa&#39; not available</td></tr>
+<tr class="MISSING_METRIC">
+<td>Article C7, clause 7.1<br>Active frontage</td>
+<td class="q">&ldquo;On primary streets, ground-floor active frontage shall be at least 40 % of the building frontage length.&rdquo;</td>
+<td>active_frontage_pct</td>
+<td>-</td>
+<td>-</td>
+<td><strong>MISSING_METRIC</strong><br>Metric &#39;active_frontage_pct&#39; not available</td></tr>
+<tr class="CANNOT_CHECK">
+<td>Article C8, clause 8.1<br>Design quality</td>
+<td class="q">&ldquo;Buildings shall respect the character of the surrounding neighbourhood.&rdquo;</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td><strong>CANNOT_CHECK</strong><br>Rule has no machine-checkable metric/operator</td></tr>
+</tbody></table>
+
+<p>Generated deterministically; the language model is never the source of truth.</p>
+</body></html>
